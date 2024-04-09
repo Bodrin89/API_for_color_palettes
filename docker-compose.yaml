@@ -6,7 +6,7 @@ services:
     container_name: ru_you_db
     image: postgres:15-alpine
     env_file:
-      - .env.docker
+      - .env
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_DB: ${POSTGRES_DB}
@@ -31,7 +31,7 @@ services:
       db:
         condition: service_healthy
     env_file:
-      - .env.docker
+      - .env
     ports:
       - 8088:8088
     volumes:
@@ -62,7 +62,7 @@ services:
     image: redis
     restart: always
     env_file:
-      - .env.docker
+      - .env
     ports:
       - 6379:6379
 
@@ -74,7 +74,7 @@ services:
     build: .
     restart: always
     env_file:
-      - .env.docker
+      - .env
     depends_on:
       db:
         condition: service_healthy

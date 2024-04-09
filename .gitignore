@@ -252,3 +252,5 @@ cython_debug/
 /ru_you_pg_data
 
 celerybeat-schedule.db
+
+.env.docker
