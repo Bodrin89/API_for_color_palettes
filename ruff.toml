@@ -1,0 +1,12 @@
+line-length = 120
+indent-width = 4
+
+exclude = ['.venv', 'migrations', 'static']
+
+[lint]
+select = ['E', 'F', 'W', 'A', 'PLC', 'PLE', 'PLW', 'I', "T201", "ERA001"]
+
+
+[format]
+quote-style = "single"
+
